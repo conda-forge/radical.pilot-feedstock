@@ -1,6 +1,6 @@
 {% set name = "radical.pilot" %}
-{% set version = "1.13.0" %}
-{% set sha256 = "5bd9eef1884ccca09c242ab6d1361588a442d9cd980613c66604ba140786bde5" %}
+{% set version = "1.14.0" %}
+{% set sha256 = "462471065de25f6d6e8baee705790828444c2eebb2073f5faf67a8da800d15a9" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   skip: true  # [py2k or py>39 or win]
 
@@ -26,6 +26,7 @@ requirements:
     - radical.gtod
     - pymongo <4
     - setproctitle
+    - dill
 
 test:
   imports:
