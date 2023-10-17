@@ -1,6 +1,6 @@
 {% set name = "radical.pilot" %}
-{% set version = "1.37.0" %}
-{% set sha256 = "7aa78735229443be2d12e2b70aaf8eba1b4c7eb1b7c9ca585f144dec2ad15131" %}
+{% set version = "1.41.0" %}
+{% set sha256 = "d68f1831af79e6ff4a6b613477be44e51e129406faccce05dab24fb7b8c5406c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-  skip: true  # [py2k or py>39 or win]
+  skip: true  # [py2k or win]
 
 requirements:
   host:
@@ -21,10 +21,9 @@ requirements:
     - pip
   run:
     - python
-    - radical.utils >=1.12
-    - radical.saga >=1.12
+    - radical.utils >=1.40
+    - radical.saga >=1.37
     - radical.gtod
-    - pymongo <4
     - setproctitle
     - dill
 
