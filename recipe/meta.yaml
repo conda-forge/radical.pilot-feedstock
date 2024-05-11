@@ -1,5 +1,5 @@
 {% set name = "radical.pilot" %}
-{% set version = "1.52.1" %}
+{% set version = "1.60.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/radical_pilot-{{ version }}.tar.gz
-  sha256: ad477f68032e8a52b7c78bfa69557ebb8aba3ed69347590ae77620fe59114052
+  sha256: 9765cdc1adba1f4f92940ede982402e650278438c871d0e6febd6c652030c8a5
 
 build:
   number: 0
@@ -20,8 +20,8 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - radical.utils >=1.44
-    - radical.gtod
+    - radical.utils >=1.60
+    - radical.gtod >=1.60
     - psij-python
     - setproctitle
     - dill
