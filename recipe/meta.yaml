@@ -20,13 +20,13 @@ requirements:
     - setuptools
     - pip
   run:
-    - requests
     - python >={{ python_min }}
     - radical.utils >=1.90.0,<1.100
     - radical.gtod >=1.90.0,<1.100
     - psij-python
     - setproctitle
     - dill
+    - requests
 
 test:
   requires:
