@@ -25,8 +25,8 @@ requirements:
     - radical.gtod >=1.90.0,<1.100
     - psij-python
     - setproctitle
-    - dill
     - requests
+    - dill
 
 test:
   requires:
