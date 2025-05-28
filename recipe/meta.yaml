@@ -1,5 +1,5 @@
 {% set name = "radical.pilot" %}
-{% set version = "1.100.0" %}
+{% set version = "1.102.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: 881e433bfa304ce5b6d35a6e13c6796defcbd3cd4d889fdc6cf6f77eabfbb424
+  sha256: e7aefc1605ab5dd0ca03c2e27d3aff84f38727f88127215d01528dc739f2f52b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
