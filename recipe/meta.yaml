@@ -1,5 +1,5 @@
 {% set name = "radical.pilot" %}
-{% set version = "1.102.0" %}
+{% set version = "1.103.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace(".", "_") }}-{{ version }}.tar.gz
-  sha256: e7aefc1605ab5dd0ca03c2e27d3aff84f38727f88127215d01528dc739f2f52b
+  sha256: bec47e9b2ada8466427d98736519bc465ed940c04623c322b66ed891062bfcf7
 
 build:
   noarch: python
@@ -20,6 +20,8 @@ requirements:
     - setuptools
     - pip
   run:
+    - cffi
+    - rc.process
     - python >={{ python_min }}
     - radical.utils >=1.100.0,<1.110
     - radical.gtod >=1.100.0,<1.110
